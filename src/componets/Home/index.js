@@ -1,39 +1,22 @@
 import { Link } from 'react-router-dom'
 import './index.scss'
 import { useState } from 'react'
-import AnimatedLetters from '../Animation'
-// import { Loader } from "react-loaders";
+import AnimatedLetters from '../AnimatedLetters'
+import { Loader } from 'react-loaders'
 
 const Home = () => {
   const [letterClass] = useState('text-animate')
-  const nameArray = ['l', 'a', 's', 't', 'n', 'a', 'm', 'e']
-  const jobArray = [
-    'w',
-    'e',
-    'b',
-    ' ',
-    'd',
-    'e',
-    'v',
-    'e',
-    'l',
-    'o',
-    'p',
-    'e',
-    'r',
-    '.',
-  ]
+  const nameArray = ['L', 'e', 't', "'s"]
+  const jobArray = ['d', 'e', 'v', 'e', 'l', 'o', 'p', '!']
 
   return (
     <>
       <div className="container home-page">
         <div className="text-zone">
+          <h2 color="#fbfbf8">Michael Harris</h2>
           <h1>
-            <span className={letterClass}>H</span>
-            <span className={`${letterClass} _12`}>i,</span>
+            <span className={`${letterClass} _12`}>Hi,</span>
             <br />
-            <span className={`${letterClass} _13`}>I'</span>
-            <span className={`${letterClass} _14`}>m</span>
             <AnimatedLetters
               letterClass={letterClass}
               strArray={nameArray}
@@ -45,15 +28,14 @@ const Home = () => {
               strArray={jobArray}
               idx={22}
             />
-            =)
           </h1>
-          <h2>Frontend Developer</h2>
+          <h2 color="#fbfbf8">Full Stack Developer</h2>
           <Link to="/contact" className="flat-button">
             CONTACT ME
           </Link>
         </div>
       </div>
-      {/* <Loader type="pacman" /> */}
+      <Loader type="pacman" />
     </>
   )
 }

@@ -3,12 +3,17 @@ html {
 }
 body {
   margin: 0;
-  font: 300 11px/1.4 'Roboto',
+  font: 300 11px/1.4 'PlayfairDisplay',
     sans-serif;
     color: #444;
-    background: #022c43;
-    overflow: hidden;
+    background: #8A8A8A;
+
     display: block;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
