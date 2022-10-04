@@ -1,8 +1,8 @@
-import AnimatedLetters from '../AnimatedLetters'
-import './index.scss'
-import Loader from 'react-loaders'
-import { useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import AnimatedLetters from "../AnimatedLetters";
+import "./index.scss";
+import Loader from "react-loaders";
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCss3,
   faGitAlt,
@@ -10,16 +10,16 @@ import {
   faJsSquare,
   faNodeJs,
   faReact,
-} from '@fortawesome/free-brands-svg-icons'
-import oldPortfolio from '../../assets/images/protofolio.png'
-import generator from '../../assets/images/generator.png'
-import quiz from '../../assets/images/quiz.png'
-import wds from '../../assets/images/wds.png'
-import weather from '../../assets/images/weaher.png'
-import pokewar from '../../assets/images/pokewar.png'
+} from "@fortawesome/free-brands-svg-icons";
+import oldPortfolio from "../../assets/images/protofolio.png";
+import generator from "../../assets/images/generator.png";
+import quiz from "../../assets/images/quiz.png";
+import wds from "../../assets/images/wds.png";
+import weather from "../../assets/images/weaher.png";
+import pokewar from "../../assets/images/pokewar.png";
 
 const About = () => {
-  const [letterClass] = useState('text-animate')
+  const [letterClass] = useState("text-animate");
   return (
     <>
       <div className="container about-page">
@@ -27,12 +27,12 @@ const About = () => {
           <h1>
             <AnimatedLetters
               letterClass={letterClass}
-              strArray={['A', 'b', 'o', 'u', 't', ' ', 'M', 'e']}
+              strArray={["A", "b", "o", "u", "t", " ", "M", "e"]}
               idx={15}
             />
           </h1>
           <p>
-            {' '}
+            {" "}
             My name is Michael Harris I'm 34 and I’m from the San Francisco Bay
             Area. I have been coding for 6 months
           </p>
@@ -89,8 +89,6 @@ const About = () => {
               </p>
             </div>
           </div>
-        </section>
-        <section className="section2">
           <div className="reveal-card">
             <img src={weather} alt=""></img>
             <div className="reveal-card__content">
@@ -159,7 +157,7 @@ const About = () => {
       </div>
       <Loader type="pacman" />
     </>
-  )
-}
+  );
+};
 
-export default About
+export default About;
