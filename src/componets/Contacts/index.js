@@ -1,28 +1,28 @@
-import './index.scss'
-import { Loader } from 'react-loaders'
-import AnimatedLetters from './../AnimatedLetters'
-import { useRef, useState } from 'react'
-import emailjs from '@emailjs/browser'
+import "./index.scss";
+import { Loader } from "react-loaders";
+import AnimatedLetters from "./../AnimatedLetters";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const [letterClass] = useState('text-animate')
-  const form = useRef()
+  const [letterClass] = useState("text-animate");
+  const form = useRef();
 
   const sendEmail = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     emailjs
-      .sendForm('gmail', 'template_00phpoj', form.current, 'TMt6Tnhzfg2NIGCJY')
+      .sendForm("gmail", "template_00phpoj", form.current, "TMt6Tnhzfg2NIGCJY")
       .then(
         () => {
-          alert('Message successfully sent!')
-          window.location.reload(false)
+          alert("Message successfully sent!");
+          window.location.reload(false);
         },
         () => {
-          alert('Failed to send the message, please try again')
+          alert("Failed to send the message, please try again");
         }
-      )
-  }
+      );
+  };
 
   return (
     <>
@@ -31,11 +31,10 @@ const Contact = () => {
           <h1>
             <AnimatedLetters
               letterClass={letterClass}
-              strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'M', 'e']}
+              strArray={["C", "o", "n", "t", "a", "c", "t", " ", "M", "e"]}
               idx={15}
             />
           </h1>
-          <p>bref note</p>
           <div className="contact-form">
             <form ref={form} onSubmit={sendEmail}>
               <ul>
@@ -75,7 +74,7 @@ const Contact = () => {
       </div>
       <Loader type="pacman" />
     </>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
