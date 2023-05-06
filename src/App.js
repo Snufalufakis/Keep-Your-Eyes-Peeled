@@ -1,9 +1,9 @@
-import './App.scss'
-import { Routes, Route } from 'react-router-dom'
-import Layout from './componets/Layout'
-import Home from './componets/Home'
-import About from './componets/About/index'
-import Contact from './componets/Contacts/index'
+import './App.scss';
+import { Routes, Route } from 'react-router-dom';
+import Layout from './componets/Layout';
+import Home from './componets/Home';
+import About from './componets/About/index';
+import Contact from './componets/Contacts/index';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         </Route>
       </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
